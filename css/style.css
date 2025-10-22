@@ -1,0 +1,150 @@
+        div {
+            /* border: 2px solid #70009c; */
+        }
+
+        .kanit-font {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .Krub-font {
+            font-family: 'Krub', sans-serif;
+        }
+
+        #content {
+            position: relative;
+            /* ปรับเลื่อนขึ้น 100px ให้แสดงเฉพาะในมือถือแนวตั้ง */
+            padding-top: 0;
+            scroll-margin-top: 100px;
+        }
+
+        /* ใช้ media query สำหรับมือถือแนวตั้ง */
+        @media (max-width: 768px) and (orientation: portrait) {
+            #content {
+                /* padding-top: 100px; */
+                /* แสดง padding-top 100px ในมือถือแนวตั้ง */
+            }
+        }
+
+        /* ------------------------------- */
+        /* ACCORDIAN */
+
+        /* พื้นหลังปกติ */
+        .accordion-button {
+            background-color: #004279;
+            color: white;
+            box-shadow: none;
+            outline: none;
+        }
+
+        /* ปุ่มที่เปิดอยู่ */
+        .accordion-button:not(.collapsed) {
+            background-color: #004279;
+            color: white;
+            box-shadow: none;
+        }
+
+        /* Hover: ให้เปลี่ยนเป็นเข้มขึ้น */
+        .accordion-button:hover {
+            background-color: #003366;
+            /* สีเข้มขึ้น */
+            color: white;
+        }
+
+        /* Focus: ลบเอฟเฟกต์ที่ค้าง */
+        .accordion-button:focus-visible {
+            outline: none;
+            box-shadow: none;
+            background-color: #004279;
+        }
+
+
+        /* ลูกศรสีขาว */
+        .accordion-button::after,
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(1);
+        }
+
+        /* -------------------------------- */
+
+        /* มือถือตัวปัญหา */
+
+        @media (max-width: 576px) {
+            .image-column {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .intro-text {
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+
+            .intro-text span {
+                font-size: 1.2rem !important;
+                /* กำหนดขนาด span ในมือถือ */
+            }
+
+            .intro-text span[style*="3rem"] {
+                font-size: 1.8rem !important;
+                /* ลดเฉพาะ span ที่เคยตั้งไว้เป็น 3rem */
+            }
+        }
+
+        /* text */
+
+        .responsive-text {
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* ขนาด font ตาม breakpoint */
+        @media (max-width: 575.98px) {
+
+            /* XS: มือถือ */
+            .responsive-text {
+                font-size: 1.1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+
+            /* SM */
+            .responsive-text {
+                font-size: 1.25rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+
+            /* MD */
+            .responsive-text {
+                font-size: 1.4rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* LG ขึ้นไป */
+            .responsive-text {
+                font-size: 1.5rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            body {
+                padding-top: 60px;
+            }
+        }
